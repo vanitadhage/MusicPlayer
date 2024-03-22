@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #controls {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Music Player</h1>
+<audio id="audioPlayer" controls>
+    <source src="C:\Users\Gaming Beast\Downloads\Tera-Zikr---Darshan-Raval---Female-Cover-Version(PaglaSongs).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+<div id="controls">
+    <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="stop()">Stop</button>
+</div>
+
+<script>
+const audioPlayer = document.getElementById('audioPlayer');
+
+function play() {
+    audioPlayer.play();
+}
+
+function pause() {
+    audioPlayer.pause();
+}
+
+function stop() {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+}
+</script>
+
+</body>
+</html>
